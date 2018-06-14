@@ -114,6 +114,16 @@ bind_zone_domains:
         target: dc001
 ```
 
+### Minimal slave configuration
+
+```Yaml
+    bind_listen_ipv4: ['any']
+    bind_allow_query: ['any']
+    bind_zone_master_server_ip: 192.168.111.222
+    bind_zone_domains:
+      - name: example.com
+```
+
 ### Hosts
 
 Host names that this DNS server should resolve can be specified in `hosts` as a list of dicts with fields `name`, `ip` and `aliases`
